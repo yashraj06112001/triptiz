@@ -17,7 +17,7 @@ class takeinput extends Controller
         $result=$i->save();
         if ($result) {
             // Data saved successfully, return a success response
-            return view('/second');
+            return ["result"=>"success"];
         } else {
             // Error saving data, return an error response
             return ["result"=>"failed"];

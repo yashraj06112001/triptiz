@@ -34,10 +34,16 @@ export default {
   methods: {
     formSubmit: async function () {
       try {
-        let c = await axios.post("http://127.0.0.1:8000/api/info", {
+        let response = await axios.post("http://127.0.0.1:8000/api/info", {
           name: this.name,
           email: this.email,
         });
+        if (response.data.result === "success") {
+          window.location.href = "/second";
+        } else {
+          // Handle error response
+          console.error("Failed to save data");
+        }
       } catch (error) {
         console.error(error);
       }

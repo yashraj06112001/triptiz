@@ -5192,7 +5192,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   methods: {
     formSubmit: function () {
       var _formSubmit = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-        var c;
+        var response;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
@@ -5203,18 +5203,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 email: this.email
               });
             case 3:
-              c = _context.sent;
-              _context.next = 9;
+              response = _context.sent;
+              if (response.data.result === "success") {
+                window.location.href = "/second";
+              } else {
+                // Handle error response
+                console.error("Failed to save data");
+              }
+              _context.next = 10;
               break;
-            case 6:
-              _context.prev = 6;
+            case 7:
+              _context.prev = 7;
               _context.t0 = _context["catch"](0);
               console.error(_context.t0);
-            case 9:
+            case 10:
             case "end":
               return _context.stop();
           }
-        }, _callee, this, [[0, 6]]);
+        }, _callee, this, [[0, 7]]);
       }));
       function formSubmit() {
         return _formSubmit.apply(this, arguments);
