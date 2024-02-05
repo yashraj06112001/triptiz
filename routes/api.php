@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\takeinput;
+use App\Http\Controllers\solution;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('info', [takeinput::class,'take']);
 Route::post('secondData',[takeinput::class,'secondData']);
+Route::post('solution',[solution::class,'sol']);

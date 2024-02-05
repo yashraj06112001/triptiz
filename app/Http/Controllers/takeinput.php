@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\output;
 use App\Models\information;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

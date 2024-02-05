@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('first-component',require('./components/FirstComponent.vue').default);
 Vue.component('sigin-component',require('./components/SigninComponent.vue').default);
 Vue.component('second-component',require('./components/secondComponent.vue').default);
+Vue.component('third-component',require('./components/ThirdComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
